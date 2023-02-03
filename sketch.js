@@ -1,6 +1,6 @@
 function setup() {
-  createCanvas(800,400);
-  createSprite(400, 200, 50, 50);
+  createCanvas(windowWidth,windowHeight);
+  createSprite(width/2, height/2, 50, 50);
 }
 
 function draw() {
