@@ -2,7 +2,7 @@ function setup() {
   createCanvas(windowWidth,windowHeight);
   box=createSprite(width/2, height/2, 50, 50);
   box.shapeColor="green"
-  alert("hi")
+  alert("hi1")
 }
 
 function draw() {
