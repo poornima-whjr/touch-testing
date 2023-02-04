@@ -7,8 +7,10 @@ function setup() {
 
 function draw() {
   background(255,255,255);  
-  if(touches.length>0)
+  if(touches.length>0){
     alert(touches[0].x)
+    touches = []
+  }
   
   drawSprites();
   
