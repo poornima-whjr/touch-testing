@@ -8,7 +8,7 @@ function setup() {
   alert("hi2")
 
   var schoolRef = database.ref("school1/");
-  schoolRef.on("value", readWater, showError);
+  schoolRef.on("value", readWater);
 }
 
 function draw() {
