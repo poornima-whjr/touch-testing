@@ -4,7 +4,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   database = firebase.database();
   box = createSprite(width / 2, height / 2, 200, 200);
-  box.shapeColor = "pink"
+  box.shapeColor = "purple"
   alert("hi3")
 
   var schoolRef = database.ref("school1/");
@@ -23,7 +23,7 @@ function draw() {
     alert("box.y :" + box.y)
     alert("touch y :" + touches[0].y)
 
-    if (touches[i].x > box.x - 100 && touches[i].x < box.x + 100 && touches[i].y > box.y - 100 && touches[i].y < box.y + 100) {
+    if (touches[0].x > box.x - 100 && touches[0].x < box.x + 100 && touches[0].y > box.y - 100 && touches[0].y < box.y + 100) {
       alert("pressed")
     }
 
