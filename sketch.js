@@ -4,8 +4,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   database = firebase.database();
   box = createSprite(width / 2, height / 2, 200, 200);
-  box.shapeColor = "purple"
-  alert("hi3")
+  box.shapeColor = "green"
+  alert("hi4")
 
   var schoolRef = database.ref("school1/");
   schoolRef.on("value", readWater);
@@ -17,14 +17,15 @@ function draw() {
   text(waterCollected,width/2,height/2-200)
   
   if (touches.length > 0) {
-
-    alert("touch x : " + touches[0].x)
-    alert("box.x :" + box.x)
-    alert("box.y :" + box.y)
-    alert("touch y :" + touches[0].y)
-
+    
+    if(mousePressedOver(box)){
+       alert("clicked")
+      writeWater(waterCollected+1)
+    }
+    
     if (touches[0].x > box.x - 100 && touches[0].x < box.x + 100 && touches[0].y > box.y - 100 && touches[0].y < box.y + 100) {
       alert("pressed")
+      writeWater(waterCollected+1)
     }
 
     touches = []
